@@ -51,3 +51,29 @@ class ConstructionWarehouse : public Warehouse {
             cout << "A toy has been produced" << endl;
         }
 };
+
+int main() {
+    Seeds seeds;
+    Paint paint;
+
+    // Probar efecto on Drop
+    cout << "Seeds: ";
+    seeds.onDropEffect();
+
+    cout << "Paint: ";
+    paint.onDropEffect();
+
+    // Crear warehouses
+    GardenWarehouse gardenWarehouse;
+    ConstructionWarehouse constructionWarehouse;
+
+    // Mostrar los items y producir
+    cout << endl;
+    gardenWarehouse.getItems();
+    gardenWarehouse.produce();
+    cout << endl;
+    constructionWarehouse.getItems();
+    constructionWarehouse.produce();
+
+    return 0;
+}
